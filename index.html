@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Galbar | Dashboard Estratégico</title>
+
+  <!-- Meta tags -->
+  <meta name="description" content="Dashboard estratégico para Galbar: transformación digital ética, científica y sostenible."/>
+  <meta name="author" content="Mauricio Piñeros, MD, MSc, FACS"/>
+  <meta name="robots" content="noindex, nofollow"/>
+
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #0a0e17;
+      color: #e0f2ff;
+      font-family: 'Segoe UI', sans-serif;
+      line-height: 1.7;
+      overflow-x: hidden;
+      position: relative;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Fondo radial sutil */
+    body::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: radial-gradient(circle at center, rgba(30, 64, 165, 0.1) 0%, transparent 70%);
+      z-index: -1;
+    }
+
+    .dashboard {
+      display: grid;
+      grid-template-columns: 1fr 2fr 1fr;
+      grid-template-rows: auto 1fr auto;
+      gap: 15px;
+      width: 95%;
+      max-width: 1800px;
+      height: 90vh;
+      padding: 20px;
+    }
+
+    /* LOGO EN VERDANA BOLD – Esquina superior izquierda */
+    .logo-left {
+      grid-column: 1;
+      grid-row: 1;
+      font-family: Verdana, sans-serif;
+      font-weight: bold;
+      font-size: 2.4rem;
+      color: #00d0ff;
+      text-shadow: 0 0 10px rgba(0, 208, 255, 0.7);
+      letter-spacing: 1px;
+    }
+
+    /* LOGO EN VERDANA BOLD – Esquina superior derecha */
+    .logo-right {
+      grid-column: 3;
+      grid-row: 1;
+      text-align: right;
+      font-family: Verdana, sans-serif;
+      font-weight: bold;
+      font-size: 2.4rem;
+      color: #00d0ff;
+      text-shadow: 0 0 10px rgba(0, 208, 255, 0.7);
+      letter-spacing: 1px;
+    }
+
+    .title {
+      grid-column: 2;
+      grid-row: 1;
+      text-align: center;
+      font-size: 2.2rem;
+      font-weight: 600;
+      color: white;
+      text-shadow: 0 0 15px rgba(255, 255, 255, 0.9);
+    }
+
+    .subtitle {
+      grid-column: 2;
+      text-align: center;
+      font-size: 1.1rem;
+      color: #a0dfff;
+      font-style: italic;
+      margin-bottom: 20px;
+    }
+
+    .main-content {
+      grid-column: 1 / 4;
+      grid-row: 2;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      align-items: stretch;
+      padding: 20px;
+      overflow-y: auto;
+      max-height: 100%;
+    }
+
+    .phase-card {
+      background: rgba(16, 24, 40, 0.7);
+      border: 1px solid #2c4b7c;
+      border-radius: 12px;
+      width: 320px;
+      padding: 20px;
+      box-shadow: 0 0 20px rgba(0, 120, 255, 0.2);
+      backdrop-filter: blur(5px);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .phase-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 120, 255, 0.4);
+    }
+
+    .phase-card h3 {
+      color: #6ec1ff;
+      margin-bottom: 10px;
+      font-size: 1.4rem;
+    }
+
+    .phase-card p {
+      color: #d0eaff;
+      font-size: 1.05rem;
+      margin-bottom: 15px;
+    }
+
+    .btn-enter {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      background: linear-gradient(to right, #bc1888, #e91e63);
+      color: white;
+      text-align: center;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+      text-decoration: none;
+    }
+
+    .btn-enter:hover {
+      background: linear-gradient(to right, #a01470, #c2185d);
+    }
+
+    .footer {
+      grid-column: 1 / 4;
+      grid-row: 3;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #64748b;
+      padding: 15px;
+      border-top: 1px solid #1e3a8a;
+      margin-top: 10px;
+    }
+
+    @media (max-width: 1200px) {
+      .dashboard {
+        grid-template-columns: 1fr 3fr 1fr;
+      }
+      .title { font-size: 1.8rem; }
+      .main-content { padding: 20px; }
+      .phase-card {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="dashboard">
+
+    <!-- Esquina superior izquierda -->
+    <div class="logo-left">GALBAR</div>
+
+    <!-- Título central -->
+    <h1 class="title">Fases del Proyecto Estratégico</h1>
+    <p class="subtitle">Transformar lo digital sin perder la esencia</p>
+
+    <!-- Esquina superior derecha -->
+    <div class="logo-right">GALBAR</div>
+
+    <!-- Contenido principal: cajas de fases -->
+    <div class="main-content">
+      
+      <!-- Carta de presentación -->
+      <div class="phase-card">
+        <h3>📄 Carta de Presentación</h3>
+        <p>Agradecimiento inicial y visión compartida.</p>
+        <a href="carta.html" target="_blank" class="btn-enter">Leer ahora →</a>
+      </div>
+
+      <!-- Fase 0 -->
+      <div class="phase-card">
+        <h3>🔍 Fase 0: Diagnóstico Estratégico</h3>
+        <p>Evaluación técnica, analítica y de mercado para identificar oportunidades de mejora.</p>
+        <a href="fase0.html" target="_blank" class="btn-enter">Entrar ahora →</a>
+      </div>
+
+      <!-- Fase 1 -->
+      <div class="phase-card">
+        <h3>🎯 Fase 1: Planeación & Diseño del Plan</h3>
+        <p>Diseño de hoja de ruta clara, calendario editorial y protocolos de ejecución.</p>
+        <a href="fase1.html" target="_blank" class="btn-enter">Entrar ahora →</a>
+      </div>
+
+      <!-- Fase 2 -->
+      <div class="phase-card">
+        <h3>🛠️ Fase 2: Producción & Preparación Técnica</h3>
+        <p>Generación de contenidos, automatización, chatbot y lanzamiento multicanal.</p>
+        <a href="fase2.html" target="_blank" class="btn-enter">Entrar ahora →</a>
+      </div>
+
+      <!-- Fase 3 -->
+      <div class="phase-card">
+        <h3>📢 Fase 3: Ejecución Multicanal</h3>
+        <p>Puesta en marcha de campañas digitales, visitas médicas y revisión PHVA.</p>
+        <a href="fase3.html" target="_blank" class="btn-enter">Entrar ahora →</a>
+      </div>
+
+      <!-- Fase 4 -->
+      <div class="phase-card">
+        <h3>📊 Fase 4: Consolidación & Seguimiento</h3>
+        <p>Monitoreo bimensual, ajuste táctico y evaluación de resultados.</p>
+        <a href="fase4.html" target="_blank" class="btn-enter">Entrar ahora →</a>
+      </div>
+
+      <!-- Botón Equipo -->
+      <div class="phase-card">
+        <h3>🤖 Equipo IA Asistida</h3>
+        <p>Conoce los 10 roles tecnológicos que respaldan esta transformación.</p>
+        <button onclick="openTeam()" class="btn-enter">Ver equipo →</button>
+      </div>
+
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      © 2025 Mauricio Piñeros, MD, MSc, FACS | Propuesta confidencial para Galbar
+    </div>
+
+  </div>
+
+  <!-- Popup del Equipo -->
+  <div id="team-popup" class="popup" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); z-index:1000; justify-content:center; align-items:center;">
+    <div class="popup-content" style="background:rgba(16,24,40,0.8); border:1px solid #2c4b7c; border-radius:12px; padding:40px; max-width:800px; width:90%; box-shadow:0 0 30px rgba(0,120,255,0.5); color:#e0f2ff;">
+      <h2 style="color:#00d0ff; text-align:center;">Equipo Galbar: Inteligencia detrás de la transformación</h2>
+      <img src="equipo-galbar.jpg" alt="Equipo Galbar" style="width:100%; max-width:600px; display:block; margin:20px auto; border-radius:10px; box-shadow:0 0 15px rgba(0,208,255,0.3);">
+      
+      <h3 style="color:#6ec1ff; margin-top:20px; border-left:4px solid #00d0ff; padding-left:12px;">👤 Liderazgo Humano</h3>
+      <p><strong>Mauricio Piñeros, MD, MSc, FACS</strong> – Gerente de Proyecto</p>
+      
+      <h3 style="color:#6ec1ff; margin-top:20px; border-left:4px solid #00d0ff; padding-left:12px;">🤖 Equipo de IA Asistida</h3>
+      <ul style="list-style-type:none; padding-left:20px;">
+        <li><strong>android-IA-01:</strong> Especialista en Diagnóstico Técnico</li>
+        <li><strong>android-IA-02:</strong> Analista de Datos y KPIs</li>
+        <li><strong>android-IA-03:</strong> Estratega de Contenido y Redes Sociales</li>
+        <li><strong>android-IA-04:</strong> Diseñador Gráfico y UI/UX</li>
+        <li><strong>android-IA-05:</strong> Especialista en Automatización (Chatbot, APIs)</li>
+        <li><strong>android-IA-06:</strong> Gestor de Campañas Digitales (SEM, Meta, TikTok)</li>
+        <li><strong>android-IA-07:</strong> Coordinador de Visitas Médicas y BTL</li>
+        <li><strong>android-IA-08:</strong> Especialista en Cumplimiento INVIMA y Ética Digital</li>
+        <li><strong>android-IA-09:</strong> Dashboard & PHVA Manager</li>
+        <li><strong>android-IA-10:</strong> Integrador de Canales Digitales y Logística</li>
+      </ul>
+
+      <p style="text-align:center; margin-top:20px; color:#a0dfff;">Este no es un equipo humano tradicional. Es una red de inteligencia asistida que amplifica mi experiencia médica, científica y estratégica, para escalar Galbar con precisión, ética y velocidad.</p>
+    </div>
+    <div id="close-popup" style="position:absolute; top:20px; right:20px; font-size:2rem; color:#a0dfff; cursor:pointer; background:rgba(0,208,255,0.1); padding:8px 12px; border-radius:50%;">✕</div>
+  </div>
+
+  <script>
+    function openTeam() {
+      document.getElementById('team-popup').style.display = 'flex';
+    }
+
+    document.getElementById('close-popup').addEventListener('click', function() {
+      document.getElementById('team-popup').style.display = 'none';
+    });
+
+    document.getElementById('team-popup').addEventListener('click', function(e) {
+      if (e.target === this) {
+        document.getElementById('team-popup').style.display = 'none';
+      }
+    });
+  </script>
+
+</body>
+</html>
