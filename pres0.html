@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentación Fase 0 y Fase 1 | Galbar</title>
+    <style>
+        body {
+            font-family: 'Verdana', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #003366;
+            cursor: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABbSURBVHgB7dJBCQAgEATB+7fGy4K7g4OjL4JQwU9FVXc3M9vZ3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d......'), auto; /* Icono de cursor */
+        }
+        .slide {
+            display: none;
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .slide.active {
+            display: block;
+        }
+        h1 {
+            color: #003366;
+            font-size: 32px;
+        }
+        h2 {
+            color: #003366;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        .nav-btn {
+            background-color: #003366;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .nav-btn:hover {
+            background-color: #002244;
+        }
+        .indice {
+            margin-top: 20px;
+            font-size: 16px;
+        }
+        .indice a {
+            margin: 0 5px;
+            text-decoration: none;
+            color: #003366;
+        }
+        .indice a:hover {
+            text-decoration: underline;
+        }
+
+        /* Estilo del chatbot */
+        #chatbot-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+        #chatbot-btn {
+            background-color: #003366;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        #chatbot-window {
+            display: none;
+            position: absolute;
+            bottom: 70px;
+            right: 0;
+            width: 300px;
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        #chatbot-header {
+            background-color: #003366;
+            color: white;
+            padding: 10px;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            text-align: center;
+        }
+        #chatbot-body {
+            padding: 15px;
+            height: 200px;
+            overflow-y: auto;
+        }
+        .message {
+            margin: 5px 0;
+            padding: 5px;
+            border-radius: 4px;
+        }
+        .bot-message {
+            background-color: #e0f7fa;
+            text-align: left;
+        }
+        .user-message {
+            background-color: #f1f1f1;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Diapositiva 0: Portada -->
+    <div id="slide0" class="slide active">
+        <h1>Transformación Digital para Galbar</h1>
+        <h2>Fase 0: Diagnóstico Estratégico</h2>
+        <p>Propuesta de valor para impulsar el crecimiento sostenible y ético de la marca</p>
+        <img src="https://via.placeholder.com/600x300/003366/FFFFFF?text=Logo+Galbar" alt="Logo Galbar" style="max-width: 100%;">
+        <br><br>
+        <button class="nav-btn" onclick="showSlide(1)">Siguiente</button>
+    </div>
+
+    <!-- Diapositiva 1: Introducción y Agradecimiento -->
+    <div id="slide1" class="slide">
+        <h2>Introducción y Agradecimiento</h2>
+        <p>Gracias por la oportunidad de presentar esta propuesta y por permitirme conocer a Galbar, su equipo humano y su valiosa propuesta de valor en dermocosméticos bio-compatibles.</p>
+        <p>Reconozco el liderazgo femenino y familiar de la empresa, y el compromiso con la salud íntima y corporal femenina.</p>
+        <br>
+        <button class="nav-btn" onclick="showSlide(0)">Anterior</button>
+        <button class="nav-btn" onclick="showSlide(2)">Siguiente</button>
+    </div>
+
+    <!-- Diapositiva 2: Punto 1 -->
+    <div id="slide2" class="slide">
+        <h2>1. Auditoría Técnica (W3C, GTmetrix, PageSpeed, Screaming Frog)</h2>
+        <p>Identificación de errores técnicos, mejoras de rendimiento y optimización SEO para el sitio web actual.</p>
+        <br>
+        <button class="nav-btn" onclick="showSlide(1)">Anterior</button>
+        <button class="nav-btn" onclick="showSlide(3)">Siguiente</button>
+    </div>
+
+    <!-- Diapositiva 3: Punto 2 -->
+    <div id="slide3" class="slide">
+        <h2>2. Revisión Regulatoria (INVIMA, Publicidad de Cosméticos)</h2>
+        <p>Verificación del cumplimiento normativo para evitar riesgos legales y asegurar mensajes publicitarios correctos.</p>
+        <br>
+        <button class="nav-btn" onclick="showSlide(2)">Anterior</button>
+        <button class="nav-btn" onclick="showSlide(4)">Siguiente</button>
+    </div>
+
+    <!-- Diapositiva 4: Punto 3 -->
+    <div id="slide4" class="slide">
+        <h2>3. Rediseño del Sitio Web (WooCommerce) con Foco en Conversión</h2>
+        <p>Mejora de la experiencia de usuario, integración con WordOffice y optimización para aumentar ventas online.</p>
+        <br>
+        <button class="nav-btn" onclick="showSlide(3)">Anterior</button>
+        <button class="nav-btn" onclick="showSlide(5)">Siguiente</button>
+    </div>
+
+    <!-- Diapositiva 5: Punto 4 -->
+    <div id="slide5" class="slide">
+        <h2>4. Definición de Buyer Personas y Estrategia de Contenido</h2>
+        <p>Análisis de comportamiento del cliente para personalizar mensajes y estrategias de marketing efectivas.</p>
+        <br>
+        <button class="nav-btn" onclick="showSlide(4)">Anterior</button>
+        <button class="nav-btn" onclick="showSlide(6)">Siguiente</button>
+    </div>
+
+    <!-- Diapositiva 6: Punto 5 -->
+    <div id="slide6" class="slide">
+        <h2>5. Desarrollo de App de Stickers y Chatbot con Gemini</h2>
+        <p>Automatización del servicio al cliente y optimización del seguimiento de envíos para mejorar la experiencia postventa.</p>
+        <br>
+        <button class="nav-btn" onclick="showSlide(5)">Anterior</button>
+        <button class="nav-btn" onclick="showSlide(7)">Siguiente</button>
+    </div>
+
+    <!-- Diapositiva 7: Fase 1 -->
+    <div id="slide7" class="slide">
+        <h2>🚀 Fase 1: Estrategia de Impacto</h2>
+        <p>Inicio: Marzo 2026 | Duración: 10 meses | Objetivo: +6.000 ventas anuales</p>
+
+        <div style="text-align: left; margin: 20px;">
+            <p><strong>•</strong> Campañas de contenido en redes sociales (Reels, TikTok, YouTube Shorts)</p>
+            <p><strong>•</strong> 50 artículos de blog posicionados en SEO</p>
+            <p><strong>•</strong> Campañas SEM/Ads con inversión mensual controlada</p>
+            <p><strong>•</strong> Dashboard PHVA bimensual con acceso compartido</p>
+            <p><strong>•</strong> Programa de fidelización y referidos</p>
+        </div>
+
+        <p>Todo lo anterior se construye sobre la base sólida de la Fase 0.</p>
+
+        <br>
+        <button class="nav-btn" onclick="showSlide(6)">Anterior</button>
+        <button class="nav-btn" onclick="showSlide(8)">Siguiente</button>
+    </div>
+
+    <!-- Diapositiva 8: Preguntas y Agradecimiento Final -->
+    <div id="slide8" class="slide">
+        <h2>💬 Preguntas, Comentarios y Dudas</h2>
+        <p>Gracias por su atención y por confiar en esta propuesta. Estoy listo para responder cualquier pregunta y comenzar a construir el futuro digital de Galbar.</p>
+        <p>Con su apoyo, lograremos un crecimiento sostenible, ético y escalable.</p>
+        <br>
+        <button class="nav-btn" onclick="showSlide(7)">Anterior</button>
+        <button class="nav-btn" onclick="showSlide(0)">Volver al Inicio</button>
+    </div>
+
+    <div class="indice">
+        <a href="#" onclick="showSlide(0)">Portada</a> |
+        <a href="#" onclick="showSlide(1)">Agradecimiento</a> |
+        <a href="#" onclick="showSlide(2)">Auditoría</a> |
+        <a href="#" onclick="showSlide(3)">Regulación</a> |
+        <a href="#" onclick="showSlide(4)">Rediseño</a> |
+        <a href="#" onclick="showSlide(5)">Personas</a> |
+        <a href="#" onclick="showSlide(6)">App y Chatbot</a> |
+        <a href="#" onclick="showSlide(7)">Fase 1</a> |
+        <a href="#" onclick="showSlide(8)">Preguntas</a>
+    </div>
+
+    <!-- Ventana del chatbot -->
+    <div id="chatbot-container">
+        <button id="chatbot-btn" onclick="toggleChat()">💬</button>
+        <div id="chatbot-window">
+            <div id="chatbot-header">Dra. Galbar</div>
+            <div id="chatbot-body">
+                <div class="message bot-message">¡Hola! Soy la Dra. Galbar, tu asistente virtual. ¿En qué puedo ayudarte?</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showSlide(n) {
+            // Oculta todas las diapositivas
+            const slides = document.querySelectorAll('.slide');
+            slides.forEach(slide => slide.classList.remove('active'));
+            // Muestra la diapositiva actual
+            document.getElementById('slide' + n).classList.add('active');
+        }
+
+        function toggleChat() {
+            const chatWindow = document.getElementById('chatbot-window');
+            chatWindow.style.display = chatWindow.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+
+</body>
+</html>
